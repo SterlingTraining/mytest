@@ -9,11 +9,12 @@ import com.fasterxml.jackson.databind.ser.std.DateSerializer;
 public class Employee implements Serializable{
 
 	private static final long serialVersionUID = -7788619177798333712L;
-	
+
 	private int id;
 	private String name;
 	private Date createdDate;
-	
+	private double salary;
+
 	public int getId() {
 		return id;
 	}
@@ -26,7 +27,7 @@ public class Employee implements Serializable{
 	public void setName(String name) {
 		this.name = name;
 	}
-	
+
 	@JsonSerialize(using=DateSerializer.class)
 	public Date getCreatedDate() {
 		return createdDate;
@@ -34,6 +35,6 @@ public class Employee implements Serializable{
 	public void setCreatedDate(Date createdDate) {
 		this.createdDate = createdDate;
 	}
-	
-	
+
+
 }
